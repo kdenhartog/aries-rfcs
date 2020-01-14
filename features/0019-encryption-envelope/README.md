@@ -269,7 +269,7 @@ For a reference implementation, see https://github.com/hyperledger/indy-sdk/blob
 
 ### Unpack Message
 
-#### unpack_message() inteface
+#### unpack_message() interface
 
 unpacked_message = unpack_message(wallet_handle, jwe)
 
@@ -323,6 +323,10 @@ For a reference implementation, see https://github.com/hyperledger/indy-sdk/blob
 * All `kid` values used currently are base58 encoded ed25519 keys. If other keys types are used, say secp256k1, base58 encoding should also be used here for interoperability.
 
 * All algorithm APIs which use libsodium are from [sodiumoxide](https://crates.io/crates/sodiumoxide) rust wrapping of the original C implementation.
+
+## Base64Url Encoding
+
+All encoding used within this RFC should use base64url encoding without padding as specified in [RFC7515 Appendix C](https://tools.ietf.org/html/rfc7515#appendix-C). It should be noted as well that not all standard libraries support this functionality.
 
 # Drawbacks
 

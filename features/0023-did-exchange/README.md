@@ -466,6 +466,10 @@ The exchange between the _inviter_ and the _invitee_ is now established. This re
 
 When Peer DIDs are used in an exchange, it is likely that both Alice and Bob will want to perform some relationship maintenance such as key rotations. Future HIPE updates will add these maintenance features.
 
+### Base64Url Encoding
+
+All encoding used within this RFC should use base64url encoding without padding as specified in [RFC7515 Appendix C](https://tools.ietf.org/html/rfc7515#appendix-C). It should be noted as well that not all standard libraries support this functionality.
+
 ## Reference
 
 * https://docs.google.com/document/d/1mRLPOK4VmU9YYdxHJSxgqBp19gNh3fT7Qk4Q069VPY8/edit#heading=h.7sxkr7hbou5i

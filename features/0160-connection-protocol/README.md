@@ -458,6 +458,10 @@ If no message is needed immediately, a trust ping can be used to allow both part
 
 After a message is sent, the *invitee* in the `complete` state. Receipt of a message puts the *inviter* into the `complete` state.
 
+## Base64Url Encoding
+
+All encoding used within this RFC should use base64url encoding without padding as specified in [RFC7515 Appendix C](https://tools.ietf.org/html/rfc7515#appendix-C). It should be noted as well that not all standard libraries support this functionality.
+
 #### Next Steps
 
 The connection between the _inviter_ and the _invitee_ is now established. This connection has no trust associated with it. The next step should be the exchange of proofs to build trust sufficient for the purpose of the relationship.

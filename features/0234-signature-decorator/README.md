@@ -81,6 +81,10 @@ The end result MUST be semantically identical to the original DIDComm message be
 
 The data to authenticate is base64URL-encoded and then embedded as-is so as to prevent false negative signature verifications that could potentially occur when sending JSON data which has no easy way to canonicalize the structure. Rather, by including the exact data in Base64URL encoding, the receiver can be certain that the data signed is the same as what was received. 
 
+### Base64Url Encoding
+
+All encoding used within this RFC should use base64url encoding without padding as specified in [RFC7515 Appendix C](https://tools.ietf.org/html/rfc7515#appendix-C). It should be noted as well that not all standard libraries support this functionality.
+
 ### Signature Schemes
 
 This decorator should support a specific set of signatures while being extensible. The list of current supported schemes are outlined below.

@@ -192,6 +192,10 @@ With the recipients headers representing an ephemeral key that can be used to de
 
 The function `XC20P` in the example above is defined as the XChahcha20Poly1035 cipher function. This can be replaced by the A256GCM cipher function.
 
+## Base64Url Encoding
+
+All encoding used within this RFC should use base64url encoding without padding as specified in [RFC7515 Appendix C](https://tools.ietf.org/html/rfc7515#appendix-C). It should be noted as well that not all standard libraries support this functionality.
+
 ## Prior art
 
 - The [JWE](https://tools.ietf.org/html/rfc7518) family of encryption methods.

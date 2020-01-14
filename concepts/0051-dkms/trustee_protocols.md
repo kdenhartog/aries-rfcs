@@ -16,7 +16,7 @@
 1. All messages will use a standard [DIDComm Envelope](../../features/0019-encryption-envelope/README.md).
 
 ## Messages and Structures
-Messages are formatted as JSON. All binary encodings use base64url.
+Messages are formatted as JSON. All binary encodings use base64url with no padding.
 All messages include the following fields:
 
 1. *version* \<string\>: The semantic version of the message data format.

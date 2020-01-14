@@ -223,6 +223,10 @@ Now Base64URL decode that section and you'll get the original message:
      - My preference would be to create a seperate API specifically for the connect protocol given that it's an edge case.
      - How would this affect the ephemeral challenge protocol as well as the "spectrum of trust" which was highlight by One of Daniel Hardman's previous posts?
 
+### Base64Url Encoding
+
+All encoding used within this RFC should use base64url encoding without padding as specified in [RFC7515 Appendix C](https://tools.ietf.org/html/rfc7515#appendix-C). It should be noted as well that not all standard libraries support this functionality.
+
 ## Drawbacks
 
 Through the choice of a JWS formatted structure we imply that an off the shelf library will support this structure. However, it's uncommon for libraries to support the edDSA signature algorithm even though it's a valid algorithm based on the [IANA registry](https://www.iana.org/assignments/jose/jose.xhtml). This means that most implementations that support this will either need to add this signature algorithm to another JWS library or
